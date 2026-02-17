@@ -1,43 +1,43 @@
-🔐 Arduino RFID Access Control System
+*🔐 Arduino RFID Access Control System*
 
 An RFID-based access control system built using an Arduino-compatible board and the MFRC522 RFID module.
 The system reads an RFID/NFC card UID, sends it to a connected Python application via serial communication, and waits for an authorization response (GRANT or DENIED) to control LED indicators.
 
-📌 Features
+**Features**
 
-📡 Reads RFID/NFC card UID
+- Reads RFID/NFC card UID
 
-🔄 Sends UID to Python via Serial (USB)
+- Sends UID to Python via Serial (USB)
 
-⏳ Waits for authentication response with timeout
+- Waits for authentication response with timeout
 
-✅ Green LED for access granted
+- Green LED for access granted
 
-❌ Red LED for access denied
+- Red LED for access denied
 
-⚠️ Error indication if no response received
+- Error indication if no response received
 
-🔁 Automatic reset after each scan
+- Automatic reset after each scan
 
-🧰 Hardware Requirements
+**Hardware Requirements**
 
-Arduino board (Uno, Nano, Mega, etc.)
+- Arduino board (Uno, Nano, Mega, etc.)
 
-MFRC522 RFID reader
+- MFRC522 RFID reader
 
-RFID/NFC cards or tags
+- RFID/NFC cards or tags
 
-1x Green LED
+- 1x Green LED
 
-1x Red LED
+- 1x Red LED
 
-2x 220Ω resistors (for LEDs)
+- 2x 220Ω resistors (for LEDs)
 
-Jumper wires
+- Jumper wires
 
-Breadboard
+- Breadboard
 
-USB cable
+- USB cable
 
 🔌 Wiring Connections
 📍 MFRC522 → Arduino
@@ -59,7 +59,7 @@ Red LED	6
 
 Each LED should have a 220Ω resistor in series.
 
-📦 Required Libraries
+**📦 Required Libraries**
 
 Install the following libraries in the Arduino IDE:
 
@@ -69,15 +69,15 @@ MFRC522 library by Miguel Balboa
 
 To install:
 
-Open Arduino IDE
+- Open Arduino IDE
 
-Go to Sketch → Include Library → Manage Libraries
+- Go to Sketch → Include Library → Manage Libraries
 
-Search for MFRC522
+- Search for MFRC522
 
-Install the library
+- Install the library
 
-🖥️ How It Works
+**How It Works**
 
 The system waits for an RFID card.
 
@@ -123,29 +123,19 @@ DENIED
 unsigned long responseTimeout = 2000; // Max wait for Python response (ms)
 unsigned long ledDisplayTime = 2000;  // LED on duration (ms)
 
+**Use Cases**
 
-You can modify these values based on your application needs.
+- Door access control
 
-📁 Project Structure
-RFID-Access-Control/
-│
-├── rfid_access.ino
-├── README.md
-└── python_auth_script.py (external system)
+- Attendance system
 
-🚀 Use Cases
+- Smart lockers
 
-Door access control
+- Secure device login
 
-Attendance system
+- IoT authentication systems
 
-Smart lockers
-
-Secure device login
-
-IoT authentication systems
-
-⚠️ Troubleshooting
+**⚠️ Troubleshooting**
 
 Problem: RFID not detected
 
@@ -167,19 +157,17 @@ Problem: Random characters in Serial Monitor
 
 Make sure baud rate matches (9600)
 
-🔒 Security Note
+**🔒 Security Note**
 
 This project relies on UID-based authentication.
 For higher security applications, consider:
 
-Encrypted communication
+- Encrypted communication
 
-Secure elements
+- Secure elements
 
-MIFARE sector authentication
+- MIFARE sector authentication
 
-Backend database verification
+- Backend database verification
 
-📜 License
 
-This project is open-source and free to use for educational and personal projects.
